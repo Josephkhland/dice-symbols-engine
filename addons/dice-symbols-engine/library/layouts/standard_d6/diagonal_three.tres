@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="DiceFaceLayoutResource" format=3 uid="uid://b3uemwnjrjcbp"]
+
+[ext_resource type="Script" uid="uid://dm0icg3b0fcyo" path="res://addons/dice-symbols-engine/resources/dice_face_layout_entry.gd" id="1_svyqu"]
+[ext_resource type="Script" uid="uid://do77604sugghm" path="res://addons/dice-symbols-engine/resources/dice_face_layout_resource.gd" id="2_tj6mk"]
+
+[sub_resource type="Resource" id="Resource_cdrcu"]
+script = ExtResource("1_svyqu")
+position = Vector2(-0.5, -0.5)
+metadata/_custom_type_script = "uid://dm0icg3b0fcyo"
+
+[sub_resource type="Resource" id="Resource_vtedh"]
+script = ExtResource("1_svyqu")
+metadata/_custom_type_script = "uid://dm0icg3b0fcyo"
+
+[sub_resource type="Resource" id="Resource_wowoe"]
+script = ExtResource("1_svyqu")
+position = Vector2(0.5, 0.5)
+metadata/_custom_type_script = "uid://dm0icg3b0fcyo"
+
+[resource]
+script = ExtResource("2_tj6mk")
+id = &"diagonal_three"
+name = "Diagonal Three"
+entries = Array[ExtResource("1_svyqu")]([SubResource("Resource_cdrcu"), SubResource("Resource_vtedh"), SubResource("Resource_wowoe")])
+metadata/_custom_type_script = "uid://do77604sugghm"

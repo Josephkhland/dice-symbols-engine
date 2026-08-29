@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c0otibhoi4xv2"]
+
+[ext_resource type="Script" uid="uid://cl540wqakaxcs" path="res://addons/dice-symbols-engine/nodes/dice_2d.gd" id="1_qlgkv"]
+
+[node name="Dice2d" type="Node2D" unique_id=1603307361]
+script = ExtResource("1_qlgkv")

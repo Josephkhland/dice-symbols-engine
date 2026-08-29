@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://d3ph1ldqc3gp7"]
+
+[ext_resource type="Script" uid="uid://0xfsdxkcj1cf" path="res://addons/dice-symbols-engine/nodes/dice_pool_2d.gd" id="1_wpn88"]
+
+[node name="DicePool2d" type="Node2D" unique_id=1025125736]
+script = ExtResource("1_wpn88")
+pool_area_color = Color(0.6901961, 0.5921569, 1, 0.078431375)

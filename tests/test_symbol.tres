@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DiceSymbolResource" format=3 uid="uid://bnbvia7a4vje6"]
+
+[ext_resource type="Script" uid="uid://b54ve4ewhksli" path="res://addons/dice-symbols-engine/resources/dice_symbol_resource.gd" id="1_0gg38"]
+
+[resource]
+script = ExtResource("1_0gg38")
+id = &"test"
+name = "Test"
+metadata/_custom_type_script = "uid://b54ve4ewhksli"

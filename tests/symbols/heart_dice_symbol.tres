@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DiceSymbolResource" format=3 uid="uid://bi166ej107tqq"]
+
+[ext_resource type="Script" uid="uid://b54ve4ewhksli" path="res://addons/dice-symbols-engine/resources/dice_symbol_resource.gd" id="1_iqnnh"]
+[ext_resource type="Texture2D" uid="uid://ciudm6bv6pfod" path="res://tests/assets/icon_heart.png" id="1_ldqfe"]
+
+[resource]
+script = ExtResource("1_iqnnh")
+id = &"heart"
+name = "Heart"
+icon = ExtResource("1_ldqfe")
+metadata/_custom_type_script = "uid://b54ve4ewhksli"

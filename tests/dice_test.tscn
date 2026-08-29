@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cuachhj51mkkv"]
+
+[ext_resource type="Script" uid="uid://dbaa3vh032s7c" path="res://tests/dice_test.gd" id="1_cdrcu"]
+[ext_resource type="Script" uid="uid://0xfsdxkcj1cf" path="res://addons/dice-symbols-engine/nodes/dice_pool_2d.gd" id="2_08syq"]
+[ext_resource type="Resource" uid="uid://d2hfjtyj2q30v" path="res://tests/test_die.tres" id="2_fiw57"]
+
+[node name="DiceTest" type="Node2D" unique_id=1415672612]
+script = ExtResource("1_cdrcu")
+dice = ExtResource("2_fiw57")
+
+[node name="DicePool2D" type="Node2D" parent="." unique_id=1544732743]
+position = Vector2(579, 317)
+script = ExtResource("2_08syq")
+layout_mode = 1
+grid_columns = 2
+grid_spacing = null
+pool_size = Vector2(1024, 300)
+draggable = true
+metadata/_custom_type_script = "uid://0xfsdxkcj1cf"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1273567008]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=61643543]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 18.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=1903626756]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=149730674]
+layout_mode = 2
+text = "ACTION"
+
+[connection signal="dice_dragged_out" from="DicePool2D" to="." method="_on_dice_pool_2d_dice_dragged_out"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]

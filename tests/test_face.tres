@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DiceFaceResource" format=3 uid="uid://cud5tuy58gox3"]
+
+[ext_resource type="Script" uid="uid://do77604sugghm" path="res://addons/dice-symbols-engine/resources/dice_face_layout_resource.gd" id="1_0j75o"]
+[ext_resource type="Script" uid="uid://kn2m0ql1x7mg" path="res://addons/dice-symbols-engine/resources/dice_face_resource.gd" id="1_ttlkj"]
+[ext_resource type="Script" uid="uid://b54ve4ewhksli" path="res://addons/dice-symbols-engine/resources/dice_symbol_resource.gd" id="2_171tp"]
+[ext_resource type="Resource" uid="uid://bnbvia7a4vje6" path="res://tests/test_symbol.tres" id="4_xnebb"]
+
+[sub_resource type="Resource" id="Resource_0j75o"]
+script = ExtResource("1_0j75o")
+transforms = Array[Transform2D]([Transform2D(1, 0, 0, 1, 0, 0)])
+metadata/_custom_type_script = "uid://do77604sugghm"
+
+[resource]
+script = ExtResource("1_ttlkj")
+id = &"face"
+name = "Kalo"
+symbols = Array[ExtResource("2_171tp")]([ExtResource("4_xnebb"), ExtResource("4_xnebb"), ExtResource("4_xnebb")])
+layout = SubResource("Resource_0j75o")
+metadata/_custom_type_script = "uid://kn2m0ql1x7mg"

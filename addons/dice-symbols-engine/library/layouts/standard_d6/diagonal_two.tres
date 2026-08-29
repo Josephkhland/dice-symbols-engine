@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="DiceFaceLayoutResource" format=3 uid="uid://dfj4qpnb2ql2c"]
+
+[ext_resource type="Script" uid="uid://dm0icg3b0fcyo" path="res://addons/dice-symbols-engine/resources/dice_face_layout_entry.gd" id="1_hjppr"]
+[ext_resource type="Script" uid="uid://do77604sugghm" path="res://addons/dice-symbols-engine/resources/dice_face_layout_resource.gd" id="2_n04xm"]
+
+[sub_resource type="Resource" id="Resource_cdrcu"]
+script = ExtResource("1_hjppr")
+position = Vector2(-0.5, -0.5)
+metadata/_custom_type_script = "uid://dm0icg3b0fcyo"
+
+[sub_resource type="Resource" id="Resource_wowoe"]
+script = ExtResource("1_hjppr")
+position = Vector2(0.5, 0.5)
+metadata/_custom_type_script = "uid://dm0icg3b0fcyo"
+
+[resource]
+script = ExtResource("2_n04xm")
+id = &"diagonal_two"
+name = "Diagonal Two"
+entries = Array[ExtResource("1_hjppr")]([SubResource("Resource_cdrcu"), SubResource("Resource_wowoe")])
+metadata/_custom_type_script = "uid://do77604sugghm"

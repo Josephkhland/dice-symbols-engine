@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="DiceFaceLayoutResource" format=3 uid="uid://buyo4ayn7wm7l"]
+
+[ext_resource type="Script" uid="uid://dm0icg3b0fcyo" path="res://addons/dice-symbols-engine/resources/dice_face_layout_entry.gd" id="1_nlbtm"]
+[ext_resource type="Script" uid="uid://do77604sugghm" path="res://addons/dice-symbols-engine/resources/dice_face_layout_resource.gd" id="2_svxod"]
+
+[sub_resource type="Resource" id="Resource_cdrcu"]
+script = ExtResource("1_nlbtm")
+position = Vector2(-0.5, -0.5)
+metadata/_custom_type_script = "uid://dm0icg3b0fcyo"
+
+[sub_resource type="Resource" id="Resource_vtedh"]
+script = ExtResource("1_nlbtm")
+position = Vector2(0.5, -0.5)
+metadata/_custom_type_script = "uid://dm0icg3b0fcyo"
+
+[sub_resource type="Resource" id="Resource_wowoe"]
+script = ExtResource("1_nlbtm")
+position = Vector2(0.5, 0.5)
+metadata/_custom_type_script = "uid://dm0icg3b0fcyo"
+
+[sub_resource type="Resource" id="Resource_r4j8y"]
+script = ExtResource("1_nlbtm")
+position = Vector2(-0.5, 0.5)
+metadata/_custom_type_script = "uid://dm0icg3b0fcyo"
+
+[sub_resource type="Resource" id="Resource_iyr77"]
+script = ExtResource("1_nlbtm")
+metadata/_custom_type_script = "uid://dm0icg3b0fcyo"
+
+[resource]
+script = ExtResource("2_svxod")
+id = &"corners_center_five"
+name = "Corners Center Five"
+entries = Array[ExtResource("1_nlbtm")]([SubResource("Resource_cdrcu"), SubResource("Resource_vtedh"), SubResource("Resource_wowoe"), SubResource("Resource_r4j8y"), SubResource("Resource_iyr77")])
+metadata/_custom_type_script = "uid://do77604sugghm"

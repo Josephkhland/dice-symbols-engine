@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DiceResource" format=3 uid="uid://d2hfjtyj2q30v"]
+
+[ext_resource type="Script" uid="uid://kn2m0ql1x7mg" path="res://addons/dice-symbols-engine/resources/dice_face_resource.gd" id="1_611aq"]
+[ext_resource type="Resource" uid="uid://b5g7yg0sb170j" path="res://tests/faces/face_1.tres" id="2_vknpl"]
+[ext_resource type="Resource" uid="uid://c7laars3wnu6s" path="res://tests/faces/face_2.tres" id="3_orpkt"]
+[ext_resource type="Resource" uid="uid://cpnfmbsgvy2nt" path="res://tests/faces/face_3.tres" id="4_wtno4"]
+[ext_resource type="Resource" uid="uid://fgua7gvj6qg0" path="res://tests/faces/face_4.tres" id="5_is1va"]
+[ext_resource type="Resource" uid="uid://ya2qktoa1c3c" path="res://tests/faces/face_5.tres" id="6_qj616"]
+[ext_resource type="Resource" uid="uid://bhlvjgs3swsqm" path="res://tests/faces/face_6.tres" id="7_5lr2m"]
+[ext_resource type="Script" uid="uid://d03g3gl3sfm5u" path="res://addons/dice-symbols-engine/resources/dice_resource.gd" id="8_yblk5"]
+
+[resource]
+script = ExtResource("8_yblk5")
+id = &"test"
+name = &"TestDie"
+faces = Array[ExtResource("1_611aq")]([ExtResource("2_vknpl"), ExtResource("3_orpkt"), ExtResource("4_wtno4"), ExtResource("5_is1va"), ExtResource("6_qj616"), ExtResource("7_5lr2m")])
+metadata/_custom_type_script = "uid://d03g3gl3sfm5u"

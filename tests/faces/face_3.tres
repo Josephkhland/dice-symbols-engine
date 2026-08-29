@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DiceFaceResource" format=3 uid="uid://cpnfmbsgvy2nt"]
+
+[ext_resource type="Script" uid="uid://kn2m0ql1x7mg" path="res://addons/dice-symbols-engine/resources/dice_face_resource.gd" id="1_3bthv"]
+[ext_resource type="Script" uid="uid://b54ve4ewhksli" path="res://addons/dice-symbols-engine/resources/dice_symbol_resource.gd" id="2_brfg1"]
+[ext_resource type="Resource" uid="uid://bi166ej107tqq" path="res://tests/symbols/heart_dice_symbol.tres" id="3_ccn0l"]
+[ext_resource type="Resource" uid="uid://ip11j3os3d1n" path="res://tests/symbols/sword_dice_symbol.tres" id="4_brfg1"]
+
+[resource]
+script = ExtResource("1_3bthv")
+id = &"face_3"
+name = "Face 3"
+symbols = Array[ExtResource("2_brfg1")]([ExtResource("3_ccn0l"), ExtResource("3_ccn0l"), ExtResource("4_brfg1")])
+metadata/_custom_type_script = "uid://kn2m0ql1x7mg"

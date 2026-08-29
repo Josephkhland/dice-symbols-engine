@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bhgos70ap22gv"]
+
+[ext_resource type="Script" uid="uid://bhy68405k1nkw" path="res://addons/dice-symbols-engine/nodes/dice_face_2d.gd" id="1_l6vls"]
+
+[node name="DiceFace2d" type="Node2D" unique_id=522683497]
+script = ExtResource("1_l6vls")

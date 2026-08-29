@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DiceSymbolResource" format=3 uid="uid://ip11j3os3d1n"]
+
+[ext_resource type="Texture2D" uid="uid://dkkvhm6j20qjb" path="res://tests/assets/icon_weapon.png" id="1_ppquq"]
+[ext_resource type="Script" uid="uid://b54ve4ewhksli" path="res://addons/dice-symbols-engine/resources/dice_symbol_resource.gd" id="2_rmloj"]
+
+[resource]
+script = ExtResource("2_rmloj")
+id = &"sword"
+name = "Sword"
+icon = ExtResource("1_ppquq")
+metadata/_custom_type_script = "uid://b54ve4ewhksli"

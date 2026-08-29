@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StandardDiceVisualResource" format=3 uid="uid://dapcrnp3xvv2o"]
+
+[ext_resource type="Script" uid="uid://do77604sugghm" path="res://addons/dice-symbols-engine/resources/dice_face_layout_resource.gd" id="1_1m7d6"]
+[ext_resource type="Resource" uid="uid://dstq63k8c2in3" path="res://addons/dice-symbols-engine/library/layouts/standard_d6/single_center.tres" id="2_caemr"]
+[ext_resource type="Script" uid="uid://dqfsejh55u25e" path="res://addons/dice-symbols-engine/resources/standard_dice_visual_resource.gd" id="2_ufmmy"]
+[ext_resource type="Resource" uid="uid://dfj4qpnb2ql2c" path="res://addons/dice-symbols-engine/library/layouts/standard_d6/diagonal_two.tres" id="3_xb6la"]
+[ext_resource type="Resource" uid="uid://b3uemwnjrjcbp" path="res://addons/dice-symbols-engine/library/layouts/standard_d6/diagonal_three.tres" id="4_1qtn6"]
+[ext_resource type="Resource" uid="uid://cauymskh80rbs" path="res://addons/dice-symbols-engine/library/layouts/standard_d6/corners_four.tres" id="5_fgoia"]
+[ext_resource type="Resource" uid="uid://buyo4ayn7wm7l" path="res://addons/dice-symbols-engine/library/layouts/standard_d6/corners_center_five.tres" id="6_emqv7"]
+[ext_resource type="Resource" uid="uid://dbaroeiox1rkk" path="res://addons/dice-symbols-engine/library/layouts/standard_d6/two_columns_six.tres" id="7_2sp0f"]
+
+[resource]
+script = ExtResource("2_ufmmy")
+sides = 6
+layouts = Array[ExtResource("1_1m7d6")]([ExtResource("2_caemr"), ExtResource("3_xb6la"), ExtResource("4_1qtn6"), ExtResource("5_fgoia"), ExtResource("6_emqv7"), ExtResource("7_2sp0f")])
+metadata/_custom_type_script = "uid://dqfsejh55u25e"

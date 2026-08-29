@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DiceFaceResource" format=3 uid="uid://c7laars3wnu6s"]
+
+[ext_resource type="Script" uid="uid://kn2m0ql1x7mg" path="res://addons/dice-symbols-engine/resources/dice_face_resource.gd" id="1_16pht"]
+[ext_resource type="Script" uid="uid://b54ve4ewhksli" path="res://addons/dice-symbols-engine/resources/dice_symbol_resource.gd" id="2_qy3rb"]
+[ext_resource type="Resource" uid="uid://bi166ej107tqq" path="res://tests/symbols/heart_dice_symbol.tres" id="3_mhu4s"]
+
+[resource]
+script = ExtResource("1_16pht")
+id = &"face_2"
+name = "Face 2"
+symbols = Array[ExtResource("2_qy3rb")]([ExtResource("3_mhu4s"), ExtResource("3_mhu4s")])
+metadata/_custom_type_script = "uid://kn2m0ql1x7mg"
