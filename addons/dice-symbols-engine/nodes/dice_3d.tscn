@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://th2mzzdkwgv8b"]
+
+[ext_resource type="Script" uid="uid://6tkuvlk8a85k6" path="res://addons/dice-symbols-engine/nodes/dice_3d.gd" id="1_d3d"]
+
+[node name="Dice3d" type="RigidBody3D"]
+script = ExtResource("1_d3d")

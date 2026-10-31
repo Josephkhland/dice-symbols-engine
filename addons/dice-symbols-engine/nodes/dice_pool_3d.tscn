@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://5dbbjgtxjptfe"]
+
+[ext_resource type="Script" uid="uid://82aeql54ysp8r" path="res://addons/dice-symbols-engine/nodes/dice_pool_3d.gd" id="1_pool"]
+
+[node name="DicePool3d" type="Node3D"]
+script = ExtResource("1_pool")

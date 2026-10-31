@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://blpbmi7i7mwu"]
+
+[ext_resource type="Script" uid="uid://c8d4cibbmdyek" path="res://addons/dice-symbols-engine/nodes/dice_pool_3d_view.gd" id="1_view"]
+[ext_resource type="PackedScene" uid="uid://dbf7e2e6lbo31" path="res://addons/dice-symbols-engine/nodes/dice_pool_3d.tscn" id="2_pool"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1"]
+size = Vector2(9, 7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1"]
+albedo_color = Color(0.6, 0.63, 0.67, 1)
+roughness = 0.9
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1"]
+size = Vector3(9, 0.4, 7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wall_x"]
+size = Vector3(0.2, 1.6, 7.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wall_z"]
+size = Vector3(9.4, 1.6, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wall_x"]
+size = Vector3(0.2, 1.6, 7.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2"]
+albedo_color = Color(0.45, 0.48, 0.52, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wall_z"]
+size = Vector3(9.4, 1.6, 0.2)
+
+[sub_resource type="Environment" id="Environment_1"]
+background_mode = 1
+background_color = Color(0.494118, 0.521569, 0.568627, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7, 0.72, 0.75, 1)
+
+[node name="DicePool3DView" type="SubViewportContainer" unique_id=524100758]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+script = ExtResource("1_view")
+
+[node name="Viewport" type="SubViewport" parent="." unique_id=558848981]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="DicePool3D" parent="Viewport" unique_id=740279435 instance=ExtResource("2_pool")]
+
+[node name="Floor" type="MeshInstance3D" parent="Viewport" unique_id=2024452735]
+mesh = SubResource("PlaneMesh_1")
+surface_material_override/0 = SubResource("StandardMaterial3D_1")
+
+[node name="FloorBody" type="StaticBody3D" parent="Viewport" unique_id=842427376]
+
+[node name="Shape" type="CollisionShape3D" parent="Viewport/FloorBody" unique_id=2114909387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+shape = SubResource("BoxShape3D_1")
+
+[node name="Catcher" type="StaticBody3D" parent="Viewport" unique_id=1911980163]
+
+[node name="Shape" type="CollisionShape3D" parent="Viewport/Catcher" unique_id=320572287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9, 0)
+shape = SubResource("BoxShape3D_2")
+
+[node name="Tray" type="StaticBody3D" parent="Viewport" unique_id=1296839884]
+
+[node name="WallX+" type="CollisionShape3D" parent="Viewport/Tray" unique_id=1265337019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6, 0.8, 0)
+shape = SubResource("BoxShape3D_wall_x")
+
+[node name="WallX-" type="CollisionShape3D" parent="Viewport/Tray" unique_id=1487834573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6, 0.8, 0)
+shape = SubResource("BoxShape3D_wall_x")
+
+[node name="WallZ+" type="CollisionShape3D" parent="Viewport/Tray" unique_id=1017212419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 3.6)
+shape = SubResource("BoxShape3D_wall_z")
+
+[node name="WallZ-" type="CollisionShape3D" parent="Viewport/Tray" unique_id=1498265358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -3.6)
+shape = SubResource("BoxShape3D_wall_z")
+
+[node name="TrayRims" type="Node3D" parent="Viewport" unique_id=1609353581]
+
+[node name="RimX+" type="MeshInstance3D" parent="Viewport/TrayRims" unique_id=1203921690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6, 0.8, 0)
+mesh = SubResource("BoxMesh_wall_x")
+surface_material_override/0 = SubResource("StandardMaterial3D_2")
+
+[node name="RimX-" type="MeshInstance3D" parent="Viewport/TrayRims" unique_id=507668633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6, 0.8, 0)
+mesh = SubResource("BoxMesh_wall_x")
+surface_material_override/0 = SubResource("StandardMaterial3D_2")
+
+[node name="RimZ+" type="MeshInstance3D" parent="Viewport/TrayRims" unique_id=49453328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 3.6)
+mesh = SubResource("BoxMesh_wall_z")
+surface_material_override/0 = SubResource("StandardMaterial3D_2")
+
+[node name="RimZ-" type="MeshInstance3D" parent="Viewport/TrayRims" unique_id=1372476421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -3.6)
+mesh = SubResource("BoxMesh_wall_z")
+surface_material_override/0 = SubResource("StandardMaterial3D_2")
+
+[node name="Environment" type="WorldEnvironment" parent="Viewport" unique_id=1399018074]
+environment = SubResource("Environment_1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Viewport" unique_id=519972516]
+transform = Transform3D(0.877583, 0.239713, -0.414918, 0, 0.866025, 0.5, 0.479426, -0.438371, -0.759436, 0, 4, 3.3)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="Viewport" unique_id=364636547]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0, 6.433074, 0)
+current = true

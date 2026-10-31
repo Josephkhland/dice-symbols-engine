@@ -4,6 +4,11 @@ extends Node2D
 
 @export var face_size: Vector2 = Vector2(256.0, 256.0)
 
+@export var symbols_scale: float = 1.0:
+	set(value):
+		symbols_scale = value
+		_rebuild()
+
 var face: DiceFace
 var layout: DiceFaceLayoutResource
 
@@ -74,7 +79,7 @@ func _create_symbol_sprite(
 	sprite.texture = symbol.icon
 	sprite.position = _get_position(entry)
 	sprite.rotation = entry.rotation
-	sprite.scale = entry.scale
+	sprite.scale = entry.scale * symbols_scale
 
 	add_child(sprite)
 
