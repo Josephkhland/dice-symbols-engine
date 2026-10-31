@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://ow0ixlqjgeai"]
+
+[ext_resource type="Script" uid="uid://d2cqd71bp3daa" path="res://tests/dice_3d_test.gd" id="1_test"]
+[ext_resource type="Resource" uid="uid://d2hfjtyj2q30v" path="res://tests/test_die.tres" id="2_die"]
+[ext_resource type="PackedScene" uid="uid://blpbmi7i7mwu" path="res://addons/dice-symbols-engine/nodes/dice_pool_3d_view.tscn" id="3_view"]
+
+[node name="Dice3DTest" type="Control" unique_id=1581289273]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_test")
+dice = ExtResource("2_die")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=369006516]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1497089646]
+layout_mode = 2
+
+[node name="AspectBox" type="AspectRatioContainer" parent="MarginContainer/VBoxContainer" unique_id=2070967348]
+layout_mode = 2
+size_flags_vertical = 3
+ratio = 1.27027
+
+[node name="DicePool3DView" parent="MarginContainer/VBoxContainer/AspectBox" unique_id=55213054 instance=ExtResource("3_view")]
+custom_minimum_size = Vector2(640, 420)
+layout_mode = 2
+tray_fill = 2.0
+
+[node name="HintLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1160217806]
+layout_mode = 2
+text = "Press ROLL to tumble 5 dice. The face on top of each die is its result."
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=307212865]
+layout_mode = 2
+text = "ROLL 5 DICE"
+
+[node name="ResultsScroll" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=95736082]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ResultLabel" type="Label" parent="MarginContainer/VBoxContainer/ResultsScroll" unique_id=905544233]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "RESULTS"
+
+[connection signal="dice_rolled" from="MarginContainer/VBoxContainer/AspectBox/DicePool3DView" to="." method="_on_dice_pool_3d_view_dice_rolled"]
+[connection signal="rolled" from="MarginContainer/VBoxContainer/AspectBox/DicePool3DView" to="." method="_on_dice_pool_3d_view_rolled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_roll_button_pressed"]
